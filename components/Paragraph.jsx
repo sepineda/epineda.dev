@@ -6,7 +6,6 @@ import Text from './Text';
 import Link from './Link';
 
 const Wrapper = styled(Box)`
-  max-width: 35em;
   width: 100%;
   position: relative;
   z-index: 1;

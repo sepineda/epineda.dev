@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Box } from "rebass/styled-components";
 
 export default styled(Box)`
-  max-width: 550px;
+  max-width: 700px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
