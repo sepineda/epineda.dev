@@ -56,7 +56,7 @@ const Footer = () => (
         <FooterColumn title="About this place" width={0.5}>
           <Text color="#666" lineHeight={1.5}>
             Welcome to my personal website! I am Eduardo Pineda, a Full-Stack
-            Developer from Costa Rica.
+            Developer from Costa Rica 🇨🇷.
           </Text>
         </FooterColumn>
         <FooterColumn las title="Social Media">
@@ -69,6 +69,11 @@ const Footer = () => (
             href="https://twitter.com/sepineda"
           >
             Follow me on Twitter
+          </FooterListItem>
+          <FooterListItem
+            href="https://mxstbr.com/"
+          >
+            Based on web site by Max Stoiber
           </FooterListItem>
         </FooterColumn>
       </Flex>

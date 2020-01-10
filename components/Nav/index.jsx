@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import { withRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import Link from '../Link';
 import Icon from '../Icon';
-import { ExternalLink as LinkExternal, Menu, X, Twitter } from 'react-feather';
+import { Menu, X, Twitter } from 'react-feather';
 import IsScrolled from '../WithIsScrolled';
 import Text from '../Text';
 import Layout from '../Layout';
@@ -15,10 +16,12 @@ import DesktopOnly from '../DesktopOnly';
 
 const { Toggle, State, Display } = createToggle('mobile-menu');
 
+const background = '#232F3E';
+
 const MobileMenu = styled(Flex)`
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: ${background};
   width: 100%;
   height: 100%;
 `;
@@ -29,7 +32,7 @@ const NavItem = withRouter(styled((props) => {
     <Box mr={4} className={props.className}>
       <Link itemProp="url" href={props.href}>
         <Text
-          color={active ? 'text' : '#666'}
+          color={active ? '#FFF' : '#EEE'}
           fontWeight={active ? 'bold' : 'normal'}
           itemProp="name"
         >
@@ -44,39 +47,45 @@ const NavItem = withRouter(styled((props) => {
   }
 `);
 
-const MobileNavItem = (props) => (
-  <Box p={3} onClick={props.onClick}>
-    <Link href={props.href}>
-      <Text color="#333" as="div" fontSize={4} fontWeight="bold">
-        {props.title}
+const MobileNavItem = ({onClick, href, title}) => (
+  <Box p={3} onClick={onClick}>
+    <Link href={href}>
+      <Text color="white" as="div" fontSize={4} fontWeight="bold">
+        {title}
       </Text>
     </Link>
   </Box>
 );
+
+MobileNavItem.propTypes={
+  onClick: PropTypes.func,
+  href: PropTypes.string,
+  title: PropTypes.string,
+};
 
 const Wrapper = styled(Flex).attrs({ as: 'nav' })`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: ${(props) => props.theme.colors.background};
+  background: ${background};
   z-index: 9;
   transition: background 250ms ease-in-out, box-shadow 250ms ease-in-out;
 
   .no-js & {
-    background: #fff;
+    background: ${background};
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints[0]}) {
-    background: #fff;
+    background: ${background};
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
   }
 
   ${(props) =>
     props.isScrolled &&
     css`
-      background: #fff;
+      background: ${background};
       box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
     `};
 `;
@@ -98,7 +107,7 @@ const Nav = () => {
                   itemScope
                   itemType="http://www.schema.org/SiteNavigationElement"
                 >
-                  <NavItem href="/articles" title="Articles" />
+                  <NavItem href="/blog" title="Blog" />
                   <NavItem href="/about" title="About" />
                   <NavItem href="/contact" title="Contact" />
                 </DesktopOnly>
@@ -115,7 +124,7 @@ const Nav = () => {
           >
             <Toggle>
               <Icon>
-                <Menu style={{ verticalAlign: 'bottom' }} />
+                <Menu color="white" style={{ verticalAlign: 'bottom' }} />
               </Icon>
             </Toggle>
           </MobileOnly>
@@ -139,15 +148,15 @@ const Nav = () => {
                     top: '21px'
                   }}
                 >
-                  <X style={{ verticalAlign: 'bottom' }} />
+                  <X color="white" style={{ verticalAlign: 'bottom' }} />
                 </Icon>
               </Toggle>
               <MobileMenu flexDirection="column">
                 <MobileNavItem href="/" title="Home" onClick={closeMenu} />
                 <MobileNavItem
-                  href="/articles"
+                  href="/blog"
                   onClick={closeMenu}
-                  title="Articles"
+                  title="Blog"
                 />
                 <MobileNavItem href="/about" title="About" onClick={closeMenu} />
                 <MobileNavItem href="/about" title="Contact" onClick={closeMenu} />

@@ -34,7 +34,7 @@ const Pre = styled(Box).attrs({
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #edeff1;
+  background-color: #dddddd;
   border-radius: 3px;
 `;
 

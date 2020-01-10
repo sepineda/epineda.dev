@@ -18,17 +18,20 @@ const Index = () => {
     <Main>
       <PageHeader title="Hi, I'm Eduardo Pineda">
         <Paragraph centered>
-          I'm a Full-Stack Software Engineer from Costa Rica 🇨🇷. I love JavaScript
-          technologies like React, Node, MongoDB, ExpressJS among others.
+          I'm a passionate Full-Stack Software Engineer at Gorilla Logic, Costa Rica 🇨🇷. 
+          I love JavaScript technologies like React, Node, MongoDB, ExpressJS, Next.js among others.
         </Paragraph>
         <Paragraph centered>
-          I also like to write articles about software development I share in{' '}
-          <Link href="/articles">articles</Link> and in{' '}
-          <Link href="https://medium.com/@sepineda">Medium</Link>.
+          I also like to write posts about software development I share in my{' '}
+          <Link href="/blog">blog</Link> and in{' '}
+          <Link href="https://medium.com/@sepineda">Medium</Link>. You can follow me on twitter at <Link href="https://twitter.com/@sepineda">@sepineda</Link>
+        </Paragraph>
+        <Paragraph>
+          When I'm not coding, I like to run 🏃‍♂️, enjoy good cinema and brew Kombucha.
         </Paragraph>
       </PageHeader>
       <Head title={DEFAULT_TITLE} />
-      <H2>Recent Articles</H2>
+      <H2>Recent Posts</H2>
       <WideSection>
         <CardGrid>
           {blogposts.slice(0, 3).map((post) => (

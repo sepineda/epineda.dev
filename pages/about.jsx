@@ -9,11 +9,16 @@ const About = () => (
       focused in JavaScript.
     </Paragraph>
     <Paragraph centered>
-        During my career I've worked in Software Sustaining, Software development in Instrument Drivers, Desktop applications, Web pages.
-      I currently work for a Software Company called Gorilla Logic.
+      Originally graduated in Electronics Engineering, found out my real passion is Software Engineering and Design. I have devoted
+      the last decade in roles like Software Developers in Embedded Systems, Instrument Drivers, Desktop Applications and more recently
+       Web Applications with special focus on Full-Stack JavaScript stack. 
+      I currently work as a Senior Software Developer at Gorilla Logic.
     </Paragraph>
     <Paragraph centered>
-      I graudated from the Costa Rica Institute of Technology in Electronics Engineering
+
+    </Paragraph>
+    <Paragraph centered>
+      I currently work as a Senior Software Developer at Gorilla Logic in Costa Rica 🇨🇷.
     </Paragraph>
   </PageHeader>
 );

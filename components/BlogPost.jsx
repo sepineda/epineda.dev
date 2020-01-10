@@ -14,11 +14,11 @@ import { ChevronLeft } from 'react-feather';
 import PrismTheme from './PrismTheme';
 
 const BackToBlog = (props) => (
-  <BreadcrumbLink {...props} color="primary" href="/articles">
+  <BreadcrumbLink {...props} color="primary" href="/blog">
     <Icon ml={0} mr={1}>
       <ChevronLeft size="1em" />
     </Icon>
-    BACK TO ARTICLES
+    BACK TO BLOG
   </BreadcrumbLink>
 );
 
@@ -40,10 +40,10 @@ export default withRouter((props) => {
           '@type': 'BlogPosting',
           headline: meta.title,
           image: meta.image,
-          url: `https://epineda.io${router.pathname}/`,
+          url: `https://epineda.dev${router.pathname}/`,
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://epineda.io/articles'
+            '@id': 'https://epineda.dev/blog'
           },
           datePublished: format(parseISO(meta.publishedAt), 'yyyy-MM-dd'),
           dateModified: format(parseISO(meta.publishedAt), 'yyyy-MM-dd'),

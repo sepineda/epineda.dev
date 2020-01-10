@@ -48,11 +48,11 @@ BlogPostListItem.propTypes = {
 const BlogIndex = () => (
   <>
     <PageHeader
-      title="Articles"
+      title="Blog"
       description="Candid thoughts about React.js, Node.js, startups and other interesting things."
       jsonld={{
         '@context': 'http://schema.org',
-        '@type': 'Articles',
+        '@type': 'Blog',
         about:
           'Candid thoughts about React.js, Node.js, startups and other interesting things.',
         author: {

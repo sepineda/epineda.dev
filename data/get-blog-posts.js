@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const META = /export\s+const\s+meta\s+=\s+(\{(\n|.)*?\n\})/;
-const DIR = path.join(process.cwd(), './pages/articles/');
+const DIR = path.join(process.cwd(), './pages/blog/');
 const files = fs
   .readdirSync(DIR)
   .filter((file) => file.endsWith('.md') || file.endsWith('.mdx'));
@@ -19,7 +19,7 @@ module.exports = files
 
     return {
       ...meta,
-      path: '/articles/' + file.replace(/\.mdx?$/, '')
+      path: '/blog/' + file.replace(/\.mdx?$/, '')
     };
   })
   .filter((meta) => meta.published)

@@ -6,7 +6,7 @@ export const meta = {
   title: 'Boosting Programming Productivity',
   summary:
     'There is always a common factor and is our method to deal with any kind of problem, technical and non-technical, that defines how effective we are in our work',
-  image: '/images/fse-books.jpeg'
+  image: '/images/do_more.jpeg'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;

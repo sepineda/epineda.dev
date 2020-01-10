@@ -47,6 +47,7 @@ const Logo = () => (
           <>
             <Heading
               css={{ transition: "margin 250ms ease-in-out" }}
+              color = "white"
               // as="h1"
               fontSize={3}
               fontWeight="normal"

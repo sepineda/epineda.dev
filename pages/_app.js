@@ -1,25 +1,25 @@
 import React from 'react';
-import App from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import App from 'next/app';
 import reset from 'styled-reset';
 import Router from 'next/router';
 import withGA from 'next-ga';
 import { MDXProvider } from '@mdx-js/react';
 import { Layout, Nav, Footer, Head } from '../components';
-import components from "../components/markdown";
+import components from '../components/markdown';
 
 const colors = {
-  blue: '#3867d6',
+  blue: '#0073B1',
   greys: ['#EEE', '#BBB', '#999', '#666'],
-  white: '#FFF',
-  black: '#333'
+  white: '#FFFFFF',
+  black: '#233040'
 };
 
 const theme = {
   colors: {
     primary: colors.blue,
     text: colors.black,
-    background: 'rgb(246, 247, 248)',
+    background: 'rgb(240,240,240)',
     secondary: colors.greys[4],
     tertiary: colors.greys[3],
     quaternary: colors.greys[2],
@@ -71,7 +71,7 @@ const NAV_HEIGHT = 65;
 export const DEFAULT_TITLE =
   'Eduardo Pineda (@sepineda) - Full-Stack JavaScript Engineer';
 const DEFAULT_DESCRIPTION = 'Passionate Software Developer';
-const DEFAULT_IMAGE = '/public/images/social_media.png';
+const DEFAULT_IMAGE = '/images/social_media.png';
 
 class MyApp extends App {
   render() {

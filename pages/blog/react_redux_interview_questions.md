@@ -6,10 +6,12 @@ export const meta = {
   title: 'React/Redux Interview Questions',
   summary:
     'A good selection of React and Redux interview questions to get your dream job in React',
-  image: '/public/images/fse-books.jpeg'
+  image: '/images/social_media.png'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+![do more](/images/do_more.jpeg)
 
 React is one of the most popular and influential JavaScript frameworks in recent times. Its popularity has only become more and bigger, as the results of the [State of JS](https://2018.stateofjs.com/front-end-frameworks/overview/) shows in the last three years,
 
