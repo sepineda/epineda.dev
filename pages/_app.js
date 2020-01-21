@@ -1,6 +1,6 @@
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import App from 'next/app';
+import PropTypes from 'prop-types';
 import reset from 'styled-reset';
 import Router from 'next/router';
 import withGA from 'next-ga';
@@ -73,35 +73,35 @@ export const DEFAULT_TITLE =
 const DEFAULT_DESCRIPTION = 'Passionate Software Developer';
 const DEFAULT_IMAGE = '/images/social_media.png';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <ThemeProvider theme={theme}>
-        <MDXProvider components={components}>
-          <>
-            <Nav />
-            <Head
-              title={DEFAULT_TITLE}
-              description={DEFAULT_DESCRIPTION}
-              image={DEFAULT_IMAGE}
-            />
-            <Layout
-              pt={[`${NAV_HEIGHT}px`, `${NAV_HEIGHT / 2}px`]}
-              css={{
-                paddingLeft: '8px',
-                paddingRight: '8px'
-              }}
-            >
-              <GlobalStyle />
-              <Component {...pageProps} />
-            </Layout>
-            <Footer />
-          </>
-        </MDXProvider>
-      </ThemeProvider>
-    );
-  }
+const MyApp = ({ Component, pageProps }) => (
+  <ThemeProvider theme={theme}>
+    <MDXProvider components={components}>
+      <>
+        <Nav />
+        <Head
+          title={DEFAULT_TITLE}
+          description={DEFAULT_DESCRIPTION}
+          image={DEFAULT_IMAGE}
+        />
+        <Layout
+          pt={[`${NAV_HEIGHT}px`, `${NAV_HEIGHT / 2}px`]}
+          css={{
+            paddingLeft: '8px',
+            paddingRight: '8px'
+          }}
+        >
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </Layout>
+        <Footer />
+      </>
+    </MDXProvider>
+  </ThemeProvider>
+);
+
+MyApp.propTypes = {
+  Component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  pageProps: PropTypes.object,
 }
 
 export default withGA('UA-92490805-11', Router)(MyApp);

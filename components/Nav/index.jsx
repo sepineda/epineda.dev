@@ -60,7 +60,7 @@ const MobileNavItem = ({onClick, href, title}) => (
 MobileNavItem.propTypes={
   onClick: PropTypes.func,
   href: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
 const Wrapper = styled(Flex).attrs({ as: 'nav' })`
