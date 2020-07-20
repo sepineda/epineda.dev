@@ -1,6 +1,6 @@
 // Adapted from https://github.com/styled-components/styled-components-website/blob/42aba1e04dcc51c94cd8d5a09defe1356d4fc0bc/components/NextPage.js
 import styled from "styled-components";
-import { Flex } from "rebass/styled-components";
+import { Flex } from "rebass";
 import { ChevronRight, ChevronLeft } from "react-feather";
 import PropTypes from 'prop-types';
 import Text from "./Text";

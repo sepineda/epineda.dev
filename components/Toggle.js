@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 
 export const createToggle = (name) => {
   const Toggle = styled.label.attrs({

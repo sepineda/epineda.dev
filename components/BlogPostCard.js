@@ -1,12 +1,12 @@
 // @noflow
 import React from 'react';
-import { parseISO, format } from 'date-fns';
+import { parse, format } from 'date-fns';
 import PropTypes from 'prop-types';
 import Link from './Link';
 import Card, { Title, Body, FinePrint } from './Card';
 
 const BlogPostCard = ({ post: { path: href, title, summary, publishedAt } }) => {
-  const date = parseISO(publishedAt);
+  const date = parse(publishedAt);
   return (
     <Link
       href={href}
@@ -21,7 +21,7 @@ const BlogPostCard = ({ post: { path: href, title, summary, publishedAt } }) => 
           {summary}
         </Body>
         <FinePrint>
-          {format(date, 'MMM do, yyyy')}
+          {format(date, 'MMM do, YYYY')}
         </FinePrint>
       </Card>
     </Link>

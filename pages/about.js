@@ -12,13 +12,12 @@ const About = () => (
       Originally graduated in Electronics Engineering, found out my real passion is Software Engineering and Design. I have devoted
       the last decade in roles like Software Developers in Embedded Systems, Instrument Drivers, Desktop Applications and more recently
        Web Applications with special focus on Full-Stack JavaScript stack. 
-      I currently work as a Senior Software Developer at Gorilla Logic.
     </Paragraph>
     <Paragraph centered>
 
     </Paragraph>
     <Paragraph centered>
-      I currently work as a Senior Software Developer at Gorilla Logic in Costa Rica 🇨🇷.
+      I currently work as a Senior Software Developer in Costa Rica 🇨🇷.
     </Paragraph>
   </PageHeader>
 );

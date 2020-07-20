@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
               __html: `document.body.classList.remove('no-js');`
             }}
           />
+          <script data-ad-client="ca-pub-4860014580980307" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <Main />
           <NextScript />
         </body>

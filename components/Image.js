@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Image } from "rebass/styled-components";
+import { Image } from "rebass";
 
 const Img = styled(Image)`
   max-width: 100%;

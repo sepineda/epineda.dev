@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "rebass/styled-components";
+import { Flex } from "rebass";
 
 const MobileOnly = styled(Flex)`
   display: none;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 
 const WideSection = styled(Box)`
   @media screen and (max-width: ${props => props.theme.breakpoints[0]}) {

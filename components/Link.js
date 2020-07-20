@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'rebass/styled-components';
+import { Link } from 'rebass';
 import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 import ConditionalWrap from 'conditional-wrap';

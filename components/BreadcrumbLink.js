@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 import PropTypes from 'prop-types';
 import { TextButton } from "./Button";
 import Text from "./Text";

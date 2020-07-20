@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 import BoxShadow from "./BoxShadow";
 
 export const TextButton = styled(Box).attrs(props => ({

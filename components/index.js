@@ -10,3 +10,5 @@ export { default as Footer } from './Footer';
 export { default as BlogPostCard } from './BlogPostCard';
 export { default as WideSection } from './WideSection';
 export { default as CardGrid } from './CardGrid';
+export { default as ViewMoreLink } from './ViewMoreLink';
+export { default as Icon } from './Icon';

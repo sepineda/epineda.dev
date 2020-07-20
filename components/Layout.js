@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 
 export default styled(Box)`
   max-width: 700px;

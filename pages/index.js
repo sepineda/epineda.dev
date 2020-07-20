@@ -7,8 +7,11 @@ import {
   Head,
   BlogPostCard,
   WideSection,
-  CardGrid
+  CardGrid,
+  ViewMoreLink,
+  Icon
 } from '../components';
+import { ChevronRight } from "react-feather";
 import { H2 } from '../components/Heading';
 import blogposts from '../data/blog-posts';
 import { DEFAULT_TITLE } from './_app';
@@ -18,7 +21,7 @@ const Index = () => {
     <Main>
       <PageHeader title="Hi, I'm Eduardo Pineda">
         <Paragraph centered>
-          I'm a passionate Full-Stack Software Engineer at Gorilla Logic, Costa Rica 🇨🇷. 
+          I'm a passionate Full-Stack Software Engineer from Costa Rica 🇨🇷. 
           I love JavaScript technologies like React, Node, MongoDB, ExpressJS, Next.js among others.
         </Paragraph>
         <Paragraph centered>
@@ -34,11 +37,17 @@ const Index = () => {
       <H2>Recent Posts</H2>
       <WideSection>
         <CardGrid>
-          {blogposts.slice(0, 3).map((post) => (
+          {blogposts.slice(0, 6).map((post) => (
             <BlogPostCard key={post.title} post={post} />
           ))}
         </CardGrid>
       </WideSection>
+      <ViewMoreLink href="/blog">
+          View more
+          <Icon>
+            <ChevronRight size="1em" />
+          </Icon>
+        </ViewMoreLink>
     </Main>
   );
 };

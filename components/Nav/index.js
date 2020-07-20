@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Flex, Box } from 'rebass/styled-components';
+import { Flex, Box } from 'rebass';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Link from '../Link';

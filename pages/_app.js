@@ -1,10 +1,11 @@
 import React from 'react';
+import App, { Container } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import reset from 'styled-reset';
 import Router from 'next/router';
 import withGA from 'next-ga';
-import { MDXProvider } from '@mdx-js/react';
+import { MDXProvider } from '@mdx-js/tag';
 import { Layout, Nav, Footer, Head } from '../components';
 import components from '../components/markdown';
 
@@ -73,35 +74,42 @@ export const DEFAULT_TITLE =
 const DEFAULT_DESCRIPTION = 'Passionate Software Developer';
 const DEFAULT_IMAGE = '/images/social_media.png';
 
-const MyApp = ({ Component, pageProps }) => (
-  <ThemeProvider theme={theme}>
-    <MDXProvider components={components}>
-      <>
-        <Nav />
-        <Head
-          title={DEFAULT_TITLE}
-          description={DEFAULT_DESCRIPTION}
-          image={DEFAULT_IMAGE}
-        />
-        <Layout
-          pt={[`${NAV_HEIGHT}px`, `${NAV_HEIGHT / 2}px`]}
-          css={{
-            paddingLeft: '8px',
-            paddingRight: '8px'
-          }}
-        >
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </Layout>
-        <Footer />
-      </>
-    </MDXProvider>
-  </ThemeProvider>
-);
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <Container>
+        <ThemeProvider theme={theme}>
+          <MDXProvider components={components}>
+            <>
+              <Nav />
+              <Head
+                title={DEFAULT_TITLE}
+                description={DEFAULT_DESCRIPTION}
+                image={DEFAULT_IMAGE}
+              />
+              <Layout
+                pt={[`${NAV_HEIGHT}px`, `${NAV_HEIGHT / 2}px`]}
+                css={{
+                  paddingLeft: '8px',
+                  paddingRight: '8px'
+                }}
+              >
+                <GlobalStyle />
+                <Component {...pageProps} />
+              </Layout>
+              <Footer />
+            </>
+          </MDXProvider>
+        </ThemeProvider>
+      </Container>
+    );
+  }
+}
 
 MyApp.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
-  pageProps: PropTypes.object,
-}
+  pageProps: PropTypes.object
+};
 
 export default withGA('UA-92490805-11', Router)(MyApp);

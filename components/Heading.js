@@ -1,4 +1,4 @@
-import { Heading } from "rebass/styled-components";
+import { Heading } from "rebass";
 
 const BaseHeading = (props) => (
   <Heading

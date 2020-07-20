@@ -1,7 +1,7 @@
 import React from 'react';
-import { Flex, Box } from 'rebass/styled-components';
+import { Flex, Box } from 'rebass';
 import { withRouter } from 'next/router';
-import { parseISO, format } from 'date-fns';
+import { parse, format } from 'date-fns';
 import Head from './Head';
 import { H2 } from './Heading';
 import Text from './Text';
@@ -24,7 +24,7 @@ const BackToBlog = (props) => (
 
 export default withRouter((props) => {
   const { meta, children, router } = props;
-  const published = format(parseISO(meta.publishedAt), 'MMMM do, yyyy');
+  const published = format(parse(meta.publishedAt), 'MMMM do, YYYY');
   const current = blogposts.map(({ title }) => title).indexOf(meta.title);
   const next = blogposts[current - 1];
   const prev = blogposts[current + 1];
@@ -45,8 +45,8 @@ export default withRouter((props) => {
             '@type': 'WebPage',
             '@id': 'https://epineda.dev/blog'
           },
-          datePublished: format(parseISO(meta.publishedAt), 'yyyy-MM-dd'),
-          dateModified: format(parseISO(meta.publishedAt), 'yyyy-MM-dd'),
+          datePublished: format(parse(meta.publishedAt), 'yyyy-MM-dd'),
+          dateModified: format(parse(meta.publishedAt), 'yyyy-MM-dd'),
           description: meta.summary,
           author: {
             '@type': 'Person',

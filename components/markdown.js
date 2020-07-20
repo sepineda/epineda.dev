@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Box } from 'rebass/styled-components';
+import { Box } from 'rebass';
 import { H2, H3, H4 } from './Heading';
 import Paragraph from './Paragraph';
 import Link from './Link';

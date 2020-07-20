@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Card, Image } from "rebass/styled-components";
+import { Card, Image } from "rebass";
 import PropTypes from 'prop-types';
 import { H3 } from "./Heading";
 import Text from "./Text";

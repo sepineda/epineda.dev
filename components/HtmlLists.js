@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 import Paragraph from "./Paragraph";
 
 const baseListStyles = css`

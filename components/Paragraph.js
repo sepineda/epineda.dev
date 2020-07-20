@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'rebass/styled-components';
+import { Box } from 'rebass';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from './Text';

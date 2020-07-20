@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from "styled-components";
-import { Flex } from 'rebass/styled-components';
+import { Flex } from 'rebass';
 import PropTypes from 'prop-types';
 import { Twitter, GitHub } from 'react-feather';
 import Text from './Text';

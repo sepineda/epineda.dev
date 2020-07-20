@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from 'rebass/styled-components';
+import { Flex } from 'rebass';
 import PropTypes from 'prop-types';
 import { Head } from '../components';
 import { H2 } from "./Heading";

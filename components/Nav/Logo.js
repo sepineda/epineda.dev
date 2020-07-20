@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Flex } from "rebass/styled-components";
+import { Flex } from "rebass";
 import Link from "../Link";
 import IsScrolled from "../WithIsScrolled";
 import Heading from "../Heading";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "rebass/styled-components";
+import { Box } from "rebass";
 
 export default styled(Box).attrs(props => ({
   ml: typeof props.ml === "number" ? props.ml : 1,
