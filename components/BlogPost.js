@@ -24,7 +24,7 @@ const BackToBlog = (props) => (
 
 export default withRouter((props) => {
   const { meta, children, router } = props;
-  const published = format(parse(meta.publishedAt), 'MMMM do, YYYY');
+  const published = format(parse(meta.publishedAt), 'MMMM Do, YYYY');
   const current = blogposts.map(({ title }) => title).indexOf(meta.title);
   const next = blogposts[current - 1];
   const prev = blogposts[current + 1];
@@ -45,8 +45,8 @@ export default withRouter((props) => {
             '@type': 'WebPage',
             '@id': 'https://epineda.dev/blog'
           },
-          datePublished: format(parse(meta.publishedAt), 'yyyy-MM-dd'),
-          dateModified: format(parse(meta.publishedAt), 'yyyy-MM-dd'),
+          datePublished: format(parse(meta.publishedAt), 'yyyy-MM-DD'),
+          dateModified: format(parse(meta.publishedAt), 'yyyy-MM-DD'),
           description: meta.summary,
           author: {
             '@type': 'Person',
@@ -60,33 +60,6 @@ export default withRouter((props) => {
       <PrismTheme />
 
       <BackToBlog mb={4} mt={[4, 5]} />
-      {meta.published !== true && (
-        <Text
-          mb={3}
-          mt={4}
-          p={3}
-          fontSize={2}
-          lineHeight={1.5}
-          bg="#FFF7E8"
-          css={{
-            border: '1px solid #F2AA1F',
-            borderRadius: '4px',
-            a: {
-              textDecoration: 'underline'
-            }
-          }}
-        >
-          <strong>⚠️ THIS IS A DRAFT, PLEASE DO NOT SHARE ⚠️</strong>{' '}
-          <Link
-            href={`https://twitter.com/messages/compose?recipient_id=2451223458&text=${encodeURIComponent(
-              `I have some feedback about "${meta.title}": `
-            )}`}
-          >
-            DM me on Twitter
-          </Link>{' '}
-          if you have any feedback.
-        </Text>
-      )}
       <H2 mb={3} mt={4}>
         {meta.title}
       </H2>

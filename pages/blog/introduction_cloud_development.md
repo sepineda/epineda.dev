@@ -2,11 +2,11 @@ import BlogPost from '../../components/BlogPost';
 
 export const meta = {
   published: true,
-  publishedAt: '2020-08-20',
+  publishedAt: '2020-09-07',
   title: 'Introduction to Cloud Architecture',
   summary:
     'Know more about the process involved in creating a web application in the cloud with this series of articles about Cloud Development.',
-  image: '/images/do_more.jpeg'
+  image: '/images/clouds.jpg'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;

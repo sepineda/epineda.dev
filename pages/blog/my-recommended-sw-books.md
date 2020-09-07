@@ -6,7 +6,7 @@ export const meta = {
   title: 'My recommended books for Software Engineering',
   summary:
     'As a Software Developer, one of the most common endeavors is to keep up with the latest technologies, like frameworks, libraries, servers, programming languages and others',
-  image: '/images/fse-books.jpeg'
+  image: '/public/images/fse-books.jpeg'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;

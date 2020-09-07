@@ -6,7 +6,7 @@ export const meta = {
   title: 'Full Stack JavaScript Interview Questions',
   summary:
     'A good selection of JavaScript interview questions for a Full Stack profile',
-  image: '/images/social_media.png'
+  image: '/public/images/social_media.png'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
