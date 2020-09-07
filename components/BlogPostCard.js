@@ -21,7 +21,7 @@ const BlogPostCard = ({ post: { path: href, title, summary, publishedAt } }) => 
           {summary}
         </Body>
         <FinePrint>
-          {format(date, 'MMM do, YYYY')}
+          {format(date, 'MMM Do, YYYY')}
         </FinePrint>
       </Card>
     </Link>

@@ -33,7 +33,7 @@ const BlogPostListItem = ({ post, small, last }) => (
       css={{ height: '1em' }}
       fontSize={small ? 1 : 2}
     >
-      {format(parse(post.publishedAt), 'MMM do, YYYY')}
+      {format(parse(post.publishedAt), 'MMM Do, YYYY')}
       {typeof post.external === 'string' && ` · ${post.external}`}
     </Text>
   </Link>
