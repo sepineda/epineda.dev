@@ -6,7 +6,7 @@ export const meta = {
   title: 'React/Redux Interview Questions',
   summary:
     'A good selection of React and Redux interview questions to get your dream job in React',
-  image: '/public/images/social_media.png'
+  image: '/images/do_more.jpeg'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;

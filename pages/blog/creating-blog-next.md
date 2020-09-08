@@ -6,7 +6,7 @@ export const meta = {
   title: 'Building a static blog site with Markdown and Next.js',
   summary:
     'Learn how to build an static blog site using Markdown, React.js and Next.js',
-  image: '/public/images/blog.jpeg'
+  image: '/images/blog.jpeg'
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
