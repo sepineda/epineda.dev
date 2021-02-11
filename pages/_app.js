@@ -3,8 +3,7 @@ import App, { Container } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import reset from 'styled-reset';
-import Router from 'next/router';
-import withGA from 'next-ga';
+import { withRouter } from 'next/router';
 import { MDXProvider } from '@mdx-js/tag';
 import { Layout, Nav, Footer, Head } from '../components';
 import components from '../components/markdown';
@@ -112,4 +111,4 @@ MyApp.propTypes = {
   pageProps: PropTypes.object
 };
 
-export default withGA('UA-92490805-11', Router)(MyApp);
+export default withRouter(MyApp);
