@@ -465,7 +465,7 @@ export default BlogPost;
 
 If you wish to go live, there is an excellent hosting option at [zeit.com](https://zeit.co/), where you can very quickly deploy your project with direct CD integration with GitHub, and you don't even need a credit card to start.
 
-Thank you for reading my blog!. Please keep up with the latest updates in my [channels](https://epineda.dev/contact). Cheers!.
+Thank you for reading my blog!. Please keep up with the latest updates in my [channels](https://epineda.net/contact). Cheers!.
 
 
 [^1], [^2]: [Client-side vs Server-side vs Pre-rendering for Web Apps](https://www.toptal.com/front-end/client-side-vs-server-side-pre-rendering).

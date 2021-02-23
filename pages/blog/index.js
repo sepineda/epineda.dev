@@ -50,17 +50,6 @@ const BlogIndex = () => (
     <PageHeader
       title="Blog"
       description="Candid thoughts about React.js, Node.js, startups and other interesting things."
-      jsonld={{
-        '@context': 'http://schema.org',
-        '@type': 'Blog',
-        about:
-          'Candid thoughts about React.js, Node.js, startups and other interesting things.',
-        author: {
-          '@type': 'Person',
-          '@id': 'sepineda',
-          name: 'Eduardo Pineda'
-        }
-      }}
     >
     </PageHeader>
     {blogposts.map((post, index) => (

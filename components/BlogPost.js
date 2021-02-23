@@ -35,25 +35,6 @@ export default withRouter((props) => {
         title={meta.title}
         description={meta.summary}
         image={meta.image}
-        jsonld={{
-          '@context': 'http://schema.org',
-          '@type': 'BlogPosting',
-          headline: meta.title,
-          image: meta.image,
-          url: `https://epineda.dev${router.pathname}/`,
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://epineda.dev/blog'
-          },
-          datePublished: format(parse(meta.publishedAt), 'yyyy-MM-DD'),
-          dateModified: format(parse(meta.publishedAt), 'yyyy-MM-DD'),
-          description: meta.summary,
-          author: {
-            '@type': 'Person',
-            '@id': 'sepineda',
-            name: 'Eduardo Pineda'
-          }
-        }}
       >
         {meta.published !== true && <meta name="robots" content="noindex" />}
       </Head>

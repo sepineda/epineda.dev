@@ -2,10 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import JsonLD from "./JsonLD";
 
 const HeadWithRouter = withRouter(
-  ({ title, description, children, image, router, jsonld }) => (
+  ({ title, description, children, image, router }) => (
     <Head>
       {/* DEFAULT */}
       {title && <title key="title">{title}</title>}{' '}
@@ -19,7 +18,7 @@ const HeadWithRouter = withRouter(
       <meta
         property="og:url"
         key="og:url"
-        content={`https://epineda.dev${router.pathname}`}
+        content={`https://epineda.net${router.pathname}`}
       />
       {title != undefined && (
         <meta property="og:title" content={title} key="og:title" />
@@ -31,7 +30,7 @@ const HeadWithRouter = withRouter(
         <meta
           property="og:image"
           key="og:image"
-          content={`https://epineda.dev${image}`}
+          content={`https://epineda.net${image}`}
         />
       )}
       {/* TWITTER */}
@@ -52,34 +51,9 @@ const HeadWithRouter = withRouter(
         <meta
           name="twitter:image"
           key="twitter:image"
-          content={`https://epineda.dev${image}`}
+          content={`https://epineda.net${image}`}
         />
       )}
-      <JsonLD
-        data={[
-          {
-            '@context': 'http://schema.org',
-            '@type': 'Person',
-            id: 'mxstbr',
-            email: 'mailto:contact@fullstackengine.com',
-            image: '/images/headshot.jpeg',
-            jobTitle: 'Senior Software Engineer',
-            familyName: 'Pineda',
-            givenName: 'Eduardo',
-            name: 'Eduardo Pineda',
-            birthPlace: 'Heredia, Costa Rica',
-            birthDate: '1983-09-03',
-            height: '178 cm',
-            gender: 'male',
-            nationality: 'Costa Rica',
-            url: 'https://epineda.dev',
-            sameAs: [
-              'http://twitter.com/sepineda',
-            ]
-          },
-          ...(Array.isArray(jsonld) ? jsonld : [jsonld])
-        ].filter(Boolean)}
-      />
       {children}
     </Head>
   )
