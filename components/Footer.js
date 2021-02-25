@@ -55,8 +55,7 @@ const Footer = () => (
       <Flex flexDirection={['column', 'row']}>
         <FooterColumn title="About this place" width={0.5}>
           <Text color="#666" lineHeight={1.5}>
-            Welcome to my personal website! I am Eduardo Pineda, a Full-Stack
-            Developer from Costa Rica 🇨🇷.
+            Welcome to my personal website! I am Eduardo Pineda, a Software Engineer from Costa Rica 🇨🇷.
           </Text>
         </FooterColumn>
         <FooterColumn las title="Social Media">

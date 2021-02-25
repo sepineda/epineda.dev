@@ -11,7 +11,7 @@ import {
   ViewMoreLink,
   Icon
 } from '../components';
-import { ChevronRight } from "react-feather";
+import { ChevronRight } from 'react-feather';
 import { H2 } from '../components/Heading';
 import blogposts from '../data/blog-posts';
 import { DEFAULT_TITLE } from './_app';
@@ -21,13 +21,15 @@ const Index = () => {
     <Main>
       <PageHeader title="Hi, I'm Eduardo Pineda">
         <Paragraph centered>
-          I'm a passionate Full-Stack Software Engineer from Costa Rica 🇨🇷. 
-          I love JavaScript technologies like React, Node, MongoDB, ExpressJS, Next.js among others.
+          I'm a Software Architect from Costa Rica 🇨🇷. I love working and helping
+          people on different topics of software development like Front-end,
+          Back-end, Cloud technologies and Software Architecture.
         </Paragraph>
         <Paragraph centered>
           I also like to write posts about software development I share in my{' '}
           <Link href="/blog">blog</Link> and in{' '}
-          <Link href="https://medium.com/@sepineda">Medium</Link>. You can follow me on twitter at <Link href="https://twitter.com/@sepineda">@sepineda</Link>
+          <Link href="https://medium.com/@sepineda">Medium</Link>. You can follow me
+          on twitter at <Link href="https://twitter.com/@sepineda">@sepineda</Link>
         </Paragraph>
         <Paragraph>
           When I'm not coding, I like to run 🏃‍♂️, enjoy good cinema and brew Kombucha.
@@ -43,11 +45,11 @@ const Index = () => {
         </CardGrid>
       </WideSection>
       <ViewMoreLink href="/blog">
-          View more
-          <Icon>
-            <ChevronRight size="1em" />
-          </Icon>
-        </ViewMoreLink>
+        View more
+        <Icon>
+          <ChevronRight size="1em" />
+        </Icon>
+      </ViewMoreLink>
     </Main>
   );
 };

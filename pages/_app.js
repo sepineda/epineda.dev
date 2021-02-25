@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
 const NAV_HEIGHT = 65;
 
 export const DEFAULT_TITLE =
-  'Eduardo Pineda (@sepineda) - Full-Stack JavaScript Engineer';
+  'Eduardo Pineda (@sepineda) - Software Engineer Engineer';
 const DEFAULT_DESCRIPTION = 'Passionate Software Developer';
 const DEFAULT_IMAGE = '/images/social_media.png';
 

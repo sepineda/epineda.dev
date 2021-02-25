@@ -124,4 +124,4 @@ This is not a programming book; however, the Lean Startup methodology has a lot 
 
 Applying the knowledge from the LEAN methodology (created at Toyota), the scientific method and agile methodologies like Scrum, Ries comes with a revolutionizing method for entrepreneurs to build new businesses.
 
-Thank you so much for reading this post. Take care and talk to you again with more Full-Stack development topics. Cheers!.
+Thank you so much for reading this post. Take care and talk to you again with more Software Engineering topics. Cheers!.
